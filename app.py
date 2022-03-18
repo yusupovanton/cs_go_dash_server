@@ -15,14 +15,13 @@ def db_to_df():
 
     df = pd.DataFrame(list_of_rows)
 
-    # with pd.ExcelWriter('csgocards/register_total.xlsx') as writer:
-    #     df.to_excel(writer)
     df['float'] = df['float'].str.strip()
     df['float'] = df['float'].astype(str).replace(' ', '')
     df['float'] = df['float'].astype(float)
     df['price'] = df['price'].str.replace(' ', '')
     df['price'] = df['price'].astype(float)
     df['id'] = df['id'].astype(int)
+
     return df
 
 
@@ -47,8 +46,11 @@ app.layout = html.Div([
 def update_output(selected_value):
 
     filtered_df = df[df['name'] == selected_value]
-    fig = px.scatter(filtered_df[['float', 'price']], x="float", y="price")
-    fig.update_layout(transition_duration=500)
+    fig = px.scatter(filtered_df, x="float", y="price", hover_name="name", hover_data=["id", "exterior", "price"])
+    fig.update_traces(
+        mode="markers+lines", hovertemplate=None)
+
+    fig.update_layout( transition_duration=500)
 
     return fig
 
