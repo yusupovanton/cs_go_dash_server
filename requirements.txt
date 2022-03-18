@@ -60,7 +60,6 @@ lxml==4.7.1
 MarkupSafe==2.1.1
 MeaningCloud-python==2.0.0
 mock==4.0.3
-moviepy==1.0.3
 numpy==1.22.0
 outcome==1.1.0
 packaging==21.3
