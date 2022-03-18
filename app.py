@@ -47,8 +47,6 @@ def update_output(selected_value):
 
     filtered_df = df[df['name'] == selected_value]
     fig = px.scatter(filtered_df, x="float", y="price", hover_name="name", hover_data=["id", "exterior", "price"])
-    fig.update_traces(
-        mode="markers+lines", hovertemplate=None)
 
     fig.update_layout( transition_duration=500)
 
