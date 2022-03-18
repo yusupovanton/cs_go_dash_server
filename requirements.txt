@@ -4,7 +4,6 @@ APScheduler==3.6.3
 async-generator==1.10
 attrs==21.4.0
 autoit==0.2.3
-awscli==1.22.26
 beautifulsoup4==4.10.0
 boto3==1.20.26
 botocore==1.23.26
@@ -45,11 +44,6 @@ imageio==2.13.5
 imageio-ffmpeg==0.4.5
 importlib-metadata==4.10.0
 iniconfig==1.1.1
-insta-share==0.0.1
-instagram-private-api==1.6.0.0
-instagram-private-api-extensions==0.3.8
-instapy==0.6.15
-instapy-cli==0.0.12
 itsdangerous==2.1.1
 Jinja2==3.0.3
 jmespath==0.10.0
@@ -74,7 +68,6 @@ py==1.11.0
 pyasn1==0.4.8
 pycparser==2.21
 pyee==8.2.2
-pyicloud==0.10.2
 pyOpenSSL==21.0.0
 pyparsing==3.0.6
 pyppeteer==0.2.6
@@ -86,7 +79,7 @@ pytest==6.2.5
 python-dateutil==2.8.2
 python-Levenshtein==0.12.2
 python-telegram-bot==13.10
-PyTikTokAPI==0.0.5
+
 pytz==2021.3
 PyVirtualDisplay==2.2
 PyYAML==5.4.1
@@ -121,5 +114,4 @@ websockets==9.1
 Werkzeug==2.0.3
 wrapt==1.13.3
 wsproto==1.0.0
-yandex-parser==0.0.155
 zipp==3.6.0
