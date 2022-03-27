@@ -8,10 +8,16 @@ server = app.server
 
 def db_to_df():
 
-    list_of_rows = []
+    print(f"Going to redis database...")
+    pipe = r.pipeline()
+    length = len(r.keys())
 
     for key in r.keys():
-        list_of_rows.append(r.hgetall(key))
+
+        pipe.hgetall(key)
+
+    list_of_rows = pipe.execute()
+    print(f"Download done!")
 
     df = pd.DataFrame(list_of_rows)
 
@@ -41,8 +47,8 @@ app.layout = html.Div([
 
     dcc.Interval(
             id='interval-component',
-            interval=10*1000,  # in milliseconds
-            n_intervals=0
+            interval=3600*1000,  # in milliseconds
+            n_intervals=1
         )
 ])
 
