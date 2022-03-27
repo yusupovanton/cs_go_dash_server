@@ -5,7 +5,6 @@ from flask import Flask
 import plotly.express as px
 from plotly.express import data
 import statsmodels
-
+import gunicorn
 import redis
-
 import pandas as pd
