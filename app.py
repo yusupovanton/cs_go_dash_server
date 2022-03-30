@@ -1,5 +1,3 @@
-import json
-
 from handlers.dispatcher import *
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
