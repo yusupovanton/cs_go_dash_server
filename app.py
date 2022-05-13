@@ -6,7 +6,7 @@ app = Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
 df = db_to_df()
-
+dbsize = actual_items_size()
 
 '''GRAPHS AND FIGURES'''
 
@@ -50,7 +50,7 @@ duplicates_fig.update_layout(
 '''LAYOUT'''
 header = html.Div([
     html.H4(f"Price of cs:go skins", style=styles['H4']),
-    html.H5(f"Current number of skins in the db is {len(r.keys())}")], style=styles['H5']
+    html.H5(f"Current number of skins in the db is {dbsize}")], style=styles['H5']
 )
 
 dropdowns = html.Div([
